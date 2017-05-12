@@ -37,51 +37,51 @@ You will need the following things properly installed on your computer:
     * Firebase
   * Specs
     * Users should be able to:
-      * See a list of all members
-      * Click a member's entry in the list to see a profile page with additional details
-      * Visit About page, explaining the group
+      * ~~See a list of all members~~
+      * ~~Click a member's entry in the list to see a profile page with additional details~~
+      * ~~Visit About page, explaining the group~~
       * Filter list of members by "role"
     * Admins should be able to:
       * Add new members
       * Edit member details
       * Delete members
     * Data should be:
-      * Modeled
-      * Persisted to a database
+      * ~~Modeled~~
+      * ~~Persisted to a database~~
   * Data Models
     * Character
-      * name : string
-      * race : string
-      * class : string
-      * level : number
-      * xp : number
+      * ~~name : string~~
+      * ~~race : string~~
+      * ~~class : string~~
+      * ~~level : number~~
+      * ~~xp : number~~
   * Integration
     * Router
-      * path: '' component: LandingPageComponent
-      * path: 'about' component: AboutComponent
-      * path: 'character-list' component: CharacterListComponent
-      * path: 'characters/:id' component: CharacterDetailComponent
+      * ~~path: '' component: LandingPageComponent~~
+      * ~~path: 'about' component: AboutComponent~~
+      * ~~path: 'character-list' component: CharacterListComponent~~
+      * ~~path: 'characters/:id' component: CharacterDetailComponent~~
       * path: 'new-character' component: NewCharacterComponent
       * path: 'admin' component: AdminComponent
     * Modules
-      * Root
+      * ~~Root~~
     * Components
-      * Root
-      * LandingPage
-      * About
+      * ~~Root~~
+      * ~~LandingPage~~
+      * ~~About~~
       * Admin
-      * Character-List
-      * Character-Detail
+      * ~~Character-List~~
+      * ~~Character-Detail~~
       * New-Character
       * Edit-Character
     * Pipes
       * Role?
     * Services
-      * Character
+      * ~~Character~~
     * Database
       * Firebase
-        * AngularFire2
-        * Imports
+        * ~~AngularFire2~~
+        * ~~Imports~~
     * UX/UI
       * Utilize styling framework to quickly divide and style application content
       * Incorporate custom styling
