@@ -1,5 +1,5 @@
 <div *ngFor="let character of characters | async" class="panel panel-default">
-  <div class="panel-body">
+  <div (click)="goToCharacterDetail(character)" class="panel-body">
     <h3>{{character.name}}</h3>
     <h4>{{character.race}} {{character.characterClass}}</h4>
   </div>

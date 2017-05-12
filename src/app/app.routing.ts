@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { CharacterDetailComponent } from './character-detail/character-detail.component';
 
 const appRoutes: Routes = [
 	{
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
 	{
 		path: 'character-list',
 		component: CharacterListComponent
+	},
+	{
+		path: 'characters/:id',
+		component: CharacterDetailComponent
 	}
 ];
 

@@ -13,4 +13,9 @@ export class CharacterService {
   getCharacters() {
     return this.characters;
   }
+
+  getCharacterById(characterId: string) {
+    return this.database.object('characters/' + characterId);
+  }
+  
 }
