@@ -1,0 +1,23 @@
+{ "characters": [
+  {
+    "name": "Dolan",
+    "race": "Wood Elf",
+    "characterClass": "Ranger",
+    "level": 6,
+    "xp": 14000
+  },
+  {
+    "name": "Jacques",
+    "race": "Human",
+    "characterClass": "Rogue",
+    "level": 6,
+    "xp": 14000
+  },
+  {
+    "name": "Znergy",
+    "race": "Gnome",
+    "characterClass": "Wizard",
+    "level": 6,
+    "xp": 14000
+  }]
+}
