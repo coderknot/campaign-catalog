@@ -10,6 +10,7 @@ import { CharacterService } from '../character.service';
   styleUrls: ['./character-list.component.css'],
   providers: [CharacterService]
 })
+
 export class CharacterListComponent implements OnInit {
   characters: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
@@ -19,6 +20,10 @@ export class CharacterListComponent implements OnInit {
 
   ngOnInit() {
     this.characters = this.characterService.getCharacters();
+  }
+
+  goToCharacterDetail(clickedCharacter) {
+    this.router.navigate(['characters', clickedCharacter.$key]);
   }
 
 }
