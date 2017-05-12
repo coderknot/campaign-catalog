@@ -57,13 +57,31 @@ You will need the following things properly installed on your computer:
       * xp : number
   * Integration
     * Router
+      * path: '' component: LandingPageComponent
+      * path: 'about' component: AboutComponent
+      * path: 'character-list' component: CharacterListComponent
+      * path: 'characters/:id' component: CharacterDetailComponent
+      * path: 'new-character' component: NewCharacterComponent
+      * path: 'admin' component: AdminComponent
     * Modules
       * Root
     * Components
       * Root
+      * LandingPage
+      * About
+      * Admin
+      * Character-List
+      * Character-Detail
+      * New-Character
+      * Edit-Character
     * Pipes
+      * Role?
     * Services
+      * Character
     * Database
+      * Firebase
+        * AngularFire2
+        * Imports
     * UX/UI
       * Utilize styling framework to quickly divide and style application content
       * Incorporate custom styling
