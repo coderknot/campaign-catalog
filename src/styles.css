@@ -6,6 +6,10 @@ nav {
   border-radius: 0 !important;
 }
 
+.main {
+  margin-top: 70px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
