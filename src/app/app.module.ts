@@ -6,12 +6,14 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
+import { CharacterListComponent } from './character-list/character-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    AboutComponent
+    AboutComponent,
+    CharacterListComponent
   ],
   imports: [
     BrowserModule,
