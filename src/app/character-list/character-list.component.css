@@ -1,3 +1,7 @@
 .panel {
   border-radius: 0 !important;
 }
+
+.panel:last-child {
+  margin-bottom: 90px;
+}
