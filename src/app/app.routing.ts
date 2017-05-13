@@ -4,6 +4,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
 	{
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
 	{
 		path: 'characters/:id',
 		component: CharacterDetailComponent
+	},
+	{
+		path: 'admin',
+		component: AdminComponent
 	}
 ];
 
