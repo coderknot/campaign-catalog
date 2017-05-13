@@ -2,5 +2,19 @@
   <div (click)="goToCharacterDetail(character)" class="panel-body">
     <h3>{{character.name}}</h3>
     <h4>{{character.race}} {{character.characterClass}}</h4>
+    <div *ngIf="currentRoute === '/admin'">
+      <p>
+        <strong>Race: </strong> {{character.race}}
+      </p>
+      <p>
+        <strong>Class: </strong> {{character.characterClass}}
+      </p>
+      <p>
+        <strong>Level: </strong> {{character.level}}
+      </p>
+      <p>
+        <strong>XP: </strong> {{character.xp}}
+      </p>
+    </div>
   </div>
 </div>
