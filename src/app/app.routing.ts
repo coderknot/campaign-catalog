@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { NewCharacterComponent } from './admin/new-character/new-character.component';
 
 const appRoutes: Routes = [
 	{
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
 	{
 		path: 'admin',
 		component: AdminComponent
+	},
+	{
+		path: 'admin/new-character',
+		component: NewCharacterComponent
 	}
 ];
 
