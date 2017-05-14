@@ -17,5 +17,9 @@ export class CharacterService {
   getCharacterById(characterId: string) {
     return this.database.object('characters/' + characterId);
   }
-  
+
+  addCharacter(newCharacter: Character) {
+    this.characters.push(newCharacter);
+  }
+
 }
