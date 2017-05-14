@@ -1,3 +1,43 @@
-<p>
-  new-character works!
-</p>
+<h3>Add a New Character:</h3>
+<div>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input class="form-control" #newName>
+  </div>
+
+  <div>
+    <label>Race:</label>
+    <br>
+    <input class="form-control" #newRace>
+  </div>
+
+  <div>
+    <label>Class:</label>
+    <br>
+    <input class="form-control" #newCharacterClass>
+  </div>
+
+  <div>
+    <label>Level:</label>
+    <br>
+    <input class="form-control" #newLevel>
+  </div>
+
+  <div>
+    <label>XP:</label>
+    <br>
+    <input class="form-control" #newXP>
+  </div>
+</div>
+
+<button (click)="submitForm(newName.value,
+                            newRace.value,
+                            newCharacterClass.value,
+                            newLevel.value,
+                            newXP.value);
+                newName.value='';
+                newRace.value='';
+                newCharacterClass.value='';
+                newLevel.value='';
+                newXP.value='';''">Add</button>
