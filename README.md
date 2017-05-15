@@ -42,9 +42,9 @@ You will need the following things properly installed on your computer:
       * ~~Visit About page, explaining the group~~
       * Filter list of members by "role"
     * Admins should be able to:
-      * Add new members
-      * Edit member details
-      * Delete members
+      * ~~Add new members~~
+      * ~~Edit member details~~
+      * ~~Delete members~~
     * Data should be:
       * ~~Modeled~~
       * ~~Persisted to a database~~
@@ -61,8 +61,8 @@ You will need the following things properly installed on your computer:
       * ~~path: 'about' component: AboutComponent~~
       * ~~path: 'character-list' component: CharacterListComponent~~
       * ~~path: 'characters/:id' component: CharacterDetailComponent~~
-      * path: 'new-character' component: NewCharacterComponent
-      * path: 'admin' component: AdminComponent
+      * ~~path: 'admin' component: AdminComponent~~
+      * ~~path: 'admin/new-character' component: NewCharacterComponent~~
     * Modules
       * ~~Root~~
     * Components
@@ -72,8 +72,8 @@ You will need the following things properly installed on your computer:
       * Admin
       * ~~Character-List~~
       * ~~Character-Detail~~
-      * New-Character
-      * Edit-Character
+      * ~~New-Character~~
+      * ~~Edit-Character~~
     * Pipes
       * Role?
     * Services
