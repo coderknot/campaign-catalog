@@ -32,10 +32,6 @@ const appRoutes: Routes = [
 	{
 		path: 'admin/new-character',
 		component: NewCharacterComponent
-	},
-	{
-		path: 'admin/edit-character',
-		component: EditCharacterComponent
 	}
 ];
 
