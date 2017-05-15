@@ -26,4 +26,12 @@ export class CharacterListComponent implements OnInit {
     this.router.navigate(['characters', clickedCharacter.$key]);
   }
 
+  showEditForm(characterToEdit) {
+    this.selectedCharacter = characterToEdit;
+  }
+
+  finishedEditing() {
+    this.selectedCharacter = null;
+  }
+
 }
