@@ -26,9 +26,15 @@
         <strong>XP: </strong> {{character.xp}}
       </p>
       <button (click)="showEditForm(character)">Edit</button>
+      <button (click)="showDeleteForm(character)">Delete</button>
       <div *ngIf="selectedCharacter === character">
         <hr>
-        <app-edit-character [selectedCharacter]="character" (editDoneSender)=finishedEditing()></app-edit-character>
+        <div *ngIf="modificationType === 'edit'">
+          <app-edit-character [selectedCharacter]="character" (editDoneSender)=finishedEditing()></app-edit-character>
+        </div>
+        <div *ngIf="modificationType === 'delete'">
+          <app-delete-character [selectedCharacter]="character"></app-delete-character>
+        </div>
       </div>
     </div>
   </div>
