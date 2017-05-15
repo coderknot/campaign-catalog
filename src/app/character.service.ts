@@ -31,4 +31,9 @@ export class CharacterService {
                                      xp: localUpdatedCharacter.xp})
   }
 
+  deleteCharacter(characterToDelete) {
+    var characterEntryInFirebase = this.getCharacterById(characterToDelete.$key);
+    characterEntryInFirebase.remove();
+  }
+
 }
