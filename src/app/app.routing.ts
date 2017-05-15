@@ -6,6 +6,7 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewCharacterComponent } from './admin/new-character/new-character.component';
+import { EditCharacterComponent } from './admin/edit-character/edit-character.component';
 
 const appRoutes: Routes = [
 	{

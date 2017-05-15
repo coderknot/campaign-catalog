@@ -22,4 +22,13 @@ export class CharacterService {
     this.characters.push(newCharacter);
   }
 
+  updateCharacter(localUpdatedCharacter) {
+    var characterEntryInFirebase = this.getCharacterById(localUpdatedCharacter.$key);
+    characterEntryInFirebase.update({name: localUpdatedCharacter.name,
+                                     race: localUpdatedCharacter.race,
+                                     characterClass: localUpdatedCharacter.characterClass,
+                                     level: localUpdatedCharacter.level,
+                                     xp: localUpdatedCharacter.xp})
+  }
+
 }

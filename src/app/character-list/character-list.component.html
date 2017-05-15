@@ -25,6 +25,11 @@
       <p>
         <strong>XP: </strong> {{character.xp}}
       </p>
+      <button (click)="showEditForm(character)">Edit</button>
+      <div *ngIf="selectedCharacter === character">
+        <hr>
+        <app-edit-character [selectedCharacter]="character" (editDoneSender)=finishedEditing()></app-edit-character>
+      </div>
     </div>
   </div>
 </div>
