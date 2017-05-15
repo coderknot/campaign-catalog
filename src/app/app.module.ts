@@ -13,6 +13,10 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { NewCharacterComponent } from './admin/new-character/new-character.component';
+import { EditCharacterComponent } from './admin/edit-character/edit-character.component';
+import { DeleteCharacterComponent } from './admin/delete-character/delete-character.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +31,11 @@ export const firebaseConfig = {
     LandingPageComponent,
     AboutComponent,
     CharacterListComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    AdminComponent,
+    NewCharacterComponent,
+    EditCharacterComponent,
+    DeleteCharacterComponent
   ],
   imports: [
     BrowserModule,

@@ -17,5 +17,23 @@ export class CharacterService {
   getCharacterById(characterId: string) {
     return this.database.object('characters/' + characterId);
   }
-  
+
+  addCharacter(newCharacter: Character) {
+    this.characters.push(newCharacter);
+  }
+
+  updateCharacter(localUpdatedCharacter) {
+    var characterEntryInFirebase = this.getCharacterById(localUpdatedCharacter.$key);
+    characterEntryInFirebase.update({name: localUpdatedCharacter.name,
+                                     race: localUpdatedCharacter.race,
+                                     characterClass: localUpdatedCharacter.characterClass,
+                                     level: localUpdatedCharacter.level,
+                                     xp: localUpdatedCharacter.xp})
+  }
+
+  deleteCharacter(characterToDelete) {
+    var characterEntryInFirebase = this.getCharacterById(characterToDelete.$key);
+    characterEntryInFirebase.remove();
+  }
+
 }

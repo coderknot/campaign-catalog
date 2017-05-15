@@ -15,6 +15,7 @@ export class CharacterListComponent implements OnInit {
   characters: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   selectedCharacter: null;
+  modificationType: string = null;
 
   constructor(private router: Router, private characterService: CharacterService) { }
 
@@ -24,6 +25,20 @@ export class CharacterListComponent implements OnInit {
 
   goToCharacterDetail(clickedCharacter) {
     this.router.navigate(['characters', clickedCharacter.$key]);
+  }
+
+  showEditForm(characterToEdit) {
+    this.modificationType = "edit";
+    this.selectedCharacter = characterToEdit;
+  }
+
+  showDeleteForm(characterToDelete) {
+    this.modificationType = "delete";
+    this.selectedCharacter = characterToDelete;
+  }
+
+  finishedEditing() {
+    this.selectedCharacter = null;
   }
 
 }

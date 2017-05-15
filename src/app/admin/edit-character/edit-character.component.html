@@ -1,0 +1,23 @@
+<h4>Edit Character</h4>
+
+<label>Name:</label>
+<input [(ngModel)]="selectedCharacter.name">
+<br>
+
+<label>Race:</label>
+<input [(ngModel)]="selectedCharacter.race">
+<br>
+
+<label>Class:</label>
+<input [(ngModel)]="selectedCharacter.characterClass">
+<br>
+
+<label>Level:</label>
+<input [(ngModel)]="selectedCharacter.level">
+<br>
+
+<label>XP:</label>
+<input [(ngModel)]="selectedCharacter.xp">
+<br>
+
+<button (click)="beginUpdatingCharacter(selectedCharacter)">Done</button>
