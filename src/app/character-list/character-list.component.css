@@ -1,7 +1,16 @@
 .panel {
   border-radius: 0 !important;
+  border-color: #102238;
+  border-width: 2px;
+  box-shadow: 1px 1px 1px #000;
 }
 
 .panel:last-child {
   margin-bottom: 90px;
+}
+
+hr {
+  border-color: #102238;
+  border-width: 2px;
+  box-shadow: 1px 1px 1px #000;
 }
