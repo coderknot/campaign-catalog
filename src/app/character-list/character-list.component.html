@@ -24,6 +24,9 @@
       <p>
         <strong>XP: </strong> {{character.xp}}
       </p>
+      <p>
+        <strong>Tags: </strong> {{character.tags}}
+      </p>
       <button (click)="showEditForm(character)" class="btn btn-warning">Edit</button>
       <button (click)="showDeleteForm(character)" class="btn btn-danger">Remove</button>
       <div *ngIf="selectedCharacter === character">
