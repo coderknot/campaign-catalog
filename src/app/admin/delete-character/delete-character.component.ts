@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Character } from '../../character.model';
 import { CharacterService } from '../../character.service';
 
@@ -11,6 +11,7 @@ import { CharacterService } from '../../character.service';
 
 export class DeleteCharacterComponent implements OnInit {
   @Input() selectedCharacter;
+  @Output() deleteDoneSender = new EventEmitter();
 
   constructor(private characterService: CharacterService) { }
 
@@ -19,6 +20,10 @@ export class DeleteCharacterComponent implements OnInit {
 
   begingDeletingCharacter(characterToDelete) {
     this.characterService.deleteCharacter(characterToDelete);
+  }
+
+  cancelDeletingCharacter() {
+    this.deleteDoneSender.emit();
   }
 
 }

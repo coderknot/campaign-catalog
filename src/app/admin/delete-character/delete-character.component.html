@@ -1,5 +1,6 @@
-<h4>Delete Character</h4>
+<h4>Remove Character</h4>
 
-<p>WARNING: Are you sure you want to delete {{selectedCharacter.name}}?</p>
+<p>WARNING: Are you sure you want to remove {{selectedCharacter.name}}?</p>
 
-<button (click)="begingDeletingCharacter(selectedCharacter)">Delete</button>
+<button (click)="begingDeletingCharacter(selectedCharacter)" class="btn btn-danger">Remove Forever</button>
+<button (click)="cancelDeletingCharacter()" class="btn btn-warning">Cancel</button>
