@@ -23,4 +23,8 @@ export class EditCharacterComponent implements OnInit {
     this.editDoneSender.emit();
   }
 
+  cancelUpdatingCharacter() {
+    this.editDoneSender.emit();
+  }
+
 }
