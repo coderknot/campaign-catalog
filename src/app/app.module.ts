@@ -17,6 +17,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NewCharacterComponent } from './admin/new-character/new-character.component';
 import { EditCharacterComponent } from './admin/edit-character/edit-character.component';
 import { DeleteCharacterComponent } from './admin/delete-character/delete-character.component';
+import { TagPipe } from './tag.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     AdminComponent,
     NewCharacterComponent,
     EditCharacterComponent,
-    DeleteCharacterComponent
+    DeleteCharacterComponent,
+    TagPipe
   ],
   imports: [
     BrowserModule,

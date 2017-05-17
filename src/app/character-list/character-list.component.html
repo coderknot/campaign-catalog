@@ -1,14 +1,35 @@
 <div *ngIf="currentRoute === '/character-list'">
-  <div *ngFor="let character of characters | async" class="panel panel-default">
+  <div class="navbar-form">
+    <div class="selectMenu">
+      <select class="form-control" (change)="tagOnChange($event.target.value)">
+        <option value="" disabled>Filter By Tag</option>
+        <option value="all">All Tags</option>
+        <option *ngFor="let tag of allTags" [value]="tag">{{tag}}</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="characters">
+  <div *ngFor="let character of characters | tag:filterByTag" class="panel panel-default">
     <div (click)="goToCharacterDetail(character)" class="panel-body">
       <h3>{{character.name}} <small>{{character.race}} {{character.characterClass}}</small></h3>
     </div>
   </div>
 </div>
+</div>
 <div *ngIf="currentRoute === '/admin'">
   <a routerLink="new-character">New Character</a>
   <hr>
-  <div *ngFor="let character of characters | async" class="panel panel-default">
+  <div class="navbar-form">
+    <div class="selectMenu">
+      <select class="form-control" (change)="tagOnChange($event.target.value)">
+        <option value="" disabled>Filter By Tag</option>
+        <option value="all">All Tags</option>
+        <option *ngFor="let tag of allTags" [value]="tag">{{tag}}</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="characters">
+  <div *ngFor="let character of characters | tag:filterByTag" class="panel panel-default">
     <div class="panel-body">
       <h3>{{character.name}}</h3>
       <h4>{{character.race}} {{character.characterClass}}</h4>
@@ -24,6 +45,9 @@
       <p>
         <strong>XP: </strong> {{character.xp}}
       </p>
+      <p>
+        <strong>Tags: </strong> {{character.tags}}
+      </p>
       <button (click)="showEditForm(character)" class="btn btn-warning">Edit</button>
       <button (click)="showDeleteForm(character)" class="btn btn-danger">Remove</button>
       <div *ngIf="selectedCharacter === character">
@@ -37,4 +61,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

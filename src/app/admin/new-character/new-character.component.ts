@@ -20,12 +20,24 @@ export class NewCharacterComponent implements OnInit {
              race: string,
              characterClass: string,
              level: number,
-             xp: number) {
-    var newCharacter: Character = new Character(name, race, characterClass, level, xp);
+             xp: number,
+             tags: string) {
+    var tagsArray: string[] = this.parseTags(tags);
+    var newCharacter: Character = new Character(name, race, characterClass, level, xp, tagsArray);
     this.characterService.addCharacter(newCharacter);
     this.router.navigate(['/admin']);
   }
 
+  parseTags(tags: string): string[] {
+    var tagsArray: string[];
+    tagsArray = tags.split(",");
 
+    for(var i = 0; i <= tagsArray.length; i++) {
+      tagsArray.push(tagsArray.shift().trim().toLowerCase());
+    }
+
+    tagsArray.sort();
+    return tagsArray;
+  }
 
 }

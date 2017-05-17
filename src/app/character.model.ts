@@ -3,5 +3,6 @@ export class Character {
               public race: string,
               public characterClass: string,
               public level: number,
-              public xp: number) { }
+              public xp: number,
+              public tags: string[]) { }
 }

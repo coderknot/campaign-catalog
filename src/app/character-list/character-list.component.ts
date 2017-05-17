@@ -12,15 +12,35 @@ import { CharacterService } from '../character.service';
 })
 
 export class CharacterListComponent implements OnInit {
-  characters: FirebaseListObservable<any[]>;
+  characters: Character[];
   currentRoute: string = this.router.url;
   selectedCharacter: null;
   modificationType: string = null;
+  allTags: string[];
+  filterByTag: string = "tag";
 
   constructor(private router: Router, private characterService: CharacterService) { }
 
   ngOnInit() {
-    this.characters = this.characterService.getCharacters();
+    this.characterService.getCharacters().subscribe((characters) => {
+      this.characters = characters;
+      this.generateTags(this.characters);
+    });
+  }
+
+  generateTags(characters) {
+    this.allTags = [];
+    characters.forEach((character) => {
+      character.tags.forEach((tag) => {
+        if(!(this.allTags.includes(tag.toString()))) {
+          this.allTags.push(tag);
+        }
+      })
+    })
+  }
+
+  tagOnChange(optionFromMenu) {
+    this.filterByTag = optionFromMenu;
   }
 
   goToCharacterDetail(clickedCharacter) {

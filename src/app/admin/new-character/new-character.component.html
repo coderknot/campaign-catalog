@@ -31,14 +31,22 @@
   </div>
 </div>
 
+<div>
+  <label>Tags:</label>
+  <br>
+  <input class="form-control" #newTags>
+</div>
+
 <button (click)="submitForm(newName.value,
                             newRace.value,
                             newCharacterClass.value,
                             newLevel.value,
-                            newXP.value);
+                            newXP.value,
+                            newTags.value);
                 newName.value='';
                 newRace.value='';
                 newCharacterClass.value='';
                 newLevel.value='';
-                newXP.value='';''"
+                newXP.value='';
+                newTags.value='';"
   class="btn btn-default">Add</button>
