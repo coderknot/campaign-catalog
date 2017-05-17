@@ -5,7 +5,7 @@
 #### By _**John Carr**_
 
 ## Description
-Campaign Catalog is an application to manage characters for Legends of the Nentir Vale, a Dungeons and Dragons 5e campaign.
+Campaign Catalog is an application to manage characters for Legends of the Nentir Vale, a Dungeons and Dragons 5e campaign. Players can see the list of characters and character details. Administrators can also add new characters, edit characters, and remove characters. Character lists can be filtered based on character tags.
 
 ## Setup / Installation Requirements
 
@@ -22,6 +22,38 @@ You will need the following things properly installed on your computer:
 * `cd campaign-catalog`
 * `npm install`
 * `bower install`
+
+#### Database Configuration
+
+##### Firebase Setup
+* If necessary, create a [Firebase](https://firebase.google.com/) account
+* Navigate to the Firebase console
+* Add a new Firebase project
+* Click 'Database', then click 'Rules', and change to the following:
+```
+  {
+    "rules": {
+      ".read": "true",
+      ".write": "true"
+    }
+  }
+```
+* Click 'Overview' (after creating a new Firebase project), then click 'Add Firebase to your web app'
+* The project credentials will display, which will be used below.
+
+##### Project Configuration
+* In the project src/app/ directory create `api-keys.ts`
+* In `api-key.ts`, add the following:
+```
+export var masterFirebaseConfig = {
+    apiKey: "[Firebase credentials here]",
+    authDomain: "[Firebase credentials here]",
+    databaseURL: "[Firebase credentials here]",
+    storageBucket: "[Firebase credentials here]",
+    messagingSenderId: "[Firebase credentials here]"
+  };
+```
+* Replace [Firebase credential here] with the project credentials from Firebase (see Firebase Setup above)
 
 ### Running / Development
 
@@ -40,7 +72,7 @@ You will need the following things properly installed on your computer:
       * ~~See a list of all members~~
       * ~~Click a member's entry in the list to see a profile page with additional details~~
       * ~~Visit About page, explaining the group~~
-      * Filter list of members by "role"
+      * ~~Filter list of members by tag~~
     * Admins should be able to:
       * ~~Add new members~~
       * ~~Edit member details~~
@@ -75,7 +107,7 @@ You will need the following things properly installed on your computer:
       * ~~New-Character~~
       * ~~Edit-Character~~
     * Pipes
-      * Role?
+      * ~~Tag~~
     * Services
       * ~~Character~~
     * Database
@@ -83,12 +115,12 @@ You will need the following things properly installed on your computer:
         * ~~AngularFire2~~
         * ~~Imports~~
     * UX/UI
-      * Utilize styling framework to quickly divide and style application content
-      * Incorporate custom styling
+      * ~~Utilize styling framework to quickly divide and style application content~~
+      * ~~Incorporate custom styling~~
     * Polish
-      * Review and refactor as necessary
-      * Remove unused code, logs, and comments
-      * Finalize README
+      * ~~Review and refactor as necessary~~
+      * ~~Remove unused code, logs, and comments~~
+      * ~~Finalize README~~
   * Additional Features
 
 ## Technologies Used
