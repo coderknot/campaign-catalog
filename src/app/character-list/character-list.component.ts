@@ -17,6 +17,7 @@ export class CharacterListComponent implements OnInit {
   selectedCharacter: null;
   modificationType: string = null;
   allTags: string[];
+  filterByTag: string = "tag";
 
   constructor(private router: Router, private characterService: CharacterService) { }
 
@@ -24,7 +25,6 @@ export class CharacterListComponent implements OnInit {
     this.characterService.getCharacters().subscribe((characters) => {
       this.characters = characters;
       this.generateTags(this.characters);
-      console.log(this.allTags);
     });
   }
 
@@ -37,6 +37,10 @@ export class CharacterListComponent implements OnInit {
         }
       })
     })
+  }
+
+  tagOnChange(optionFromMenu) {
+    this.filterByTag = optionFromMenu;
   }
 
   goToCharacterDetail(clickedCharacter) {
